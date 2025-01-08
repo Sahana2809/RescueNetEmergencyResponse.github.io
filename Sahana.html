@@ -116,73 +116,7 @@ Data Structures and Algorithms</p>
 
 <h1>Course Learning Reflections</h1>
 
-<p><p>1. Kinds of Problems We See in Nature: Iteration, Recursion, Backtracking<br>
-Nature provides numerous examples that parallel the concepts of iteration, recursion, and backtracking in computational terms:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Iteration:</strong> The recurring cycle of seasons is a clear representation of iteration. Each season follows the previous one in a predictable manner, similar to how loops in programming repeat a set of instructions until a condition is met.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Recursion:</strong> The growth pattern of cabbage leaves, where each layer forms upon the previous one, embodies recursion. This process builds upon itself, akin to a function calling itself to solve smaller instances of a problem.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Backtracking:</strong> Ants foraging for food illustrate backtracking. They traverse paths in search of resources and, upon encountering obstacles or dead ends, retrace their steps to explore alternative routes. This mirrors the backtracking technique in algorithms, where paths are explored and retracted when they lead to dead ends.<br>
-These examples showcase how fundamental algorithmic principles are intricately mirrored in natural processes, emphasizing the profound connection between computational logic and the patterns observed in the natural world.</p>
-
-<p>2. Space and Time Efficiency: Importance and Classes of Problems<br>
-<strong>Space Efficiency:</strong> Refers to how well an algorithm uses memory during execution. Space complexity measures the amount of memory required in relation to input size. This is critical in systems with limited resources, such as embedded systems or when processing large datasets.<br>
-<strong>Time Efficiency:</strong> Measures how fast an algorithm performs its task based on the input size, often quantified through time complexity. It is essential for large datasets or real-time applications.<br>
-<strong>Classes of Problems and Orders of Growth:</strong><br>
-The orders of growth of an algorithm describe how time or space requirements grow as the input size increases:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• O(1): Constant time (e.g., accessing an array element).<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• O(log n): Logarithmic time (e.g., binary search).<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• O(n): Linear time (e.g., iterating through an array).<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• O(n log n): Log-linear time (e.g., merge sort).<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• O(n²): Quadratic time (e.g., bubble sort).<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• O(2ⁿ): Exponential time (e.g., solving the traveling salesman problem).<br>
-Understanding these complexities is crucial for assessing an algorithm's efficiency, enabling programmers to determine its suitability for specific applications.</p>
-
-<p>3. Takeaways from Different Design Principles<br>
-Studying different algorithms has helped me grasp their key principles and applications more clearly. Key takeaways include:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Decomposition:</strong> Breaking complex problems into smaller, manageable sub-problems simplifies analysis and solution development.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Pattern Recognition:</strong> Identifying recurring structures or behaviors in data or algorithms allows leveraging reusable solutions.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Abstraction:</strong> Focusing on essential details while ignoring unnecessary complexities simplifies the problem-solving process.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Lazy Propagation/Evaluation:</strong> Delaying computation until necessary optimizes performance, commonly used in segment trees and other optimization algorithms.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Sliding Window:</strong> This technique efficiently solves problems involving subarrays or substrings, optimizing space and time complexity.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Pruning:</strong> Eliminating unnecessary computations or paths in a search space optimizes performance, as seen in branch-and-bound algorithms.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Memoization and Pre-computing:</strong> Storing intermediate results during runtime avoids redundant computations, while pre-computing results for static data improves runtime efficiency.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Level Order Traversal:</strong> Exploring tree structures level by level aids in understanding hierarchical relationships and processing nodes systematically.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Hierarchical Data:</strong> Organizing data in parent-child relationships facilitates efficient data management and retrieval.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Edge Relaxation:</strong> Updating the shortest known distances in graphs is crucial for algorithms like Dijkstra's and Bellman-Ford.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Balancing and Rotations:</strong> Maintaining balance in tree structures ensures optimal performance for search, insert, and delete operations.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Kleene Closure:</strong> Finding all possible connections or paths in a set of states or nodes is essential in automata theory and graph traversal.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Parental Dominance:</strong> Understanding that parent nodes dominate child nodes helps in optimizing tree-based algorithms.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Prefix and Suffix:</strong> Utilizing precomputed arrays for prefix and suffix sums can significantly enhance search and query efficiency.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Partitioning:</strong> Dividing data into manageable segments improves processing and management, especially in sorting and searching algorithms.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Bit Manipulations:</strong> Optimizing operations using bitwise techniques can lead to more efficient algorithms, particularly in low-level programming and performance-critical applications.</p>
-
-<p>4. Hierarchical Data and Tree Data Structures<br>
-<strong>Hierarchical Data:</strong> Data organized in a tree-like structure where each element (node) is connected to one or more sub-elements (child nodes) through parent-child relationships. It allows efficient representation, traversal, and management of complex relationships.<br>
-Hierarchical data can be effectively represented and navigated using various tree data structures. These structures optimize searching, balancing, and organization of data, with each being an improvement over the previous one:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Binary Tree:</strong> Each node has at most two children.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Binary Search Tree (BST):</strong> A binary tree where the left and right subtrees are ordered for efficient searching, insertion, and deletion.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>AVL Tree:</strong> A self-balancing BST with a height difference constraint between subtrees, ensuring O(log n) time complexity for operations.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Red-Black Tree:</strong> A self-balancing BST with a more relaxed balancing requirement, also ensuring O(log n) time complexity.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>2-3 Tree:</strong> A balanced tree that maintains sorted order and ensures all leaf nodes are at the same level.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Heap:</strong> A complete binary tree that maintains a special order, making it suitable for priority queues.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Trie:</strong> A tree-like structure used for storing strings, optimizing operations like autocomplete.<br>
-These structures optimize search, insertion, and deletion operations, making them essential for efficient data management.</p>
-
-<p>5. Need for Array Query Algorithms and Their Implications<br>
-Efficient array query algorithms are crucial for managing large datasets with frequent updates. They enable quick responses to various queries, such as sum, minimum, or maximum, without the need for recalculating values each time. These algorithms optimize query processing, especially for large datasets, by significantly reducing time complexity compared to direct computation for each query. Their importance is underscored in applications where both static and dynamic arrays are involved, and multiple queries need to be handled efficiently.<br>
-<strong>Sparse Table:</strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Principle:</strong> Precomputes and stores results to allow for constant-time range queries after an initial preprocessing phase.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Application:</strong> Best suited for static data with frequent range queries, such as finding minimum or maximum values over a range.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Implication:</strong> Offers fast query times post-preprocessing, but requires significant upfront preprocessing time, making it less suitable for dynamic datasets.<br>
-<strong>Fenwick Tree (Binary Indexed Tree):</strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Principle:</strong> Utilizes a clever bitwise approach to efficiently handle prefix sum queries and point updates in O(log n) time.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Application:</strong> Commonly used in problems involving cumulative sums or frequency counts, such as calculating the sum of elements in a range.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Implication:</strong> Provides efficient updates and queries, but requires additional space for storage, which can be a consideration in memory-constrained environments.<br>
-<strong>Segment Tree:</strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Principle:</strong> Supports efficient range queries and point updates in O(log n) time, allowing for dynamic updates to the dataset.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Application:</strong> Suitable for dynamic datasets requiring range queries, such as sum, minimum, or maximum queries, making it versatile for various applications.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Implication:</strong> Highly efficient for dynamic data, though it requires more space and time for construction compared to other data structures, which can impact performance in scenarios with limited resources.<br>
-<strong>Practical Applications:</strong><br>
-These array query algorithms have significant practical applications. For instance, they enable price filters on shopping sites like Amazon, allowing customers to search within specific price ranges efficiently. Similarly, financial platforms utilize range queries to analyze stock trends over chosen periods, demonstrating the importance of these algorithms in modern data-driven applications. By balancing speed and simplicity, these structures are vital for enhancing user experience and operational efficiency in various domains.</p><strong>1. Kinds of Problems We See in Nature: Iteration, Recursion, Backtracking</strong></p>
+<p><strong>1. Kinds of Problems We See in Nature: Iteration, Recursion, Backtracking</strong></p>
 <p>Nature provides numerous examples that parallel the concepts of iteration, recursion, and backtracking in computational terms:</p>
 <ul>
     <li><strong>Iteration:</strong> The recurring cycle of seasons is a clear representation of iteration. Each season follows the previous one in a predictable manner, similar to how loops in programming repeat a set of instructions until a condition is met.</li>
@@ -254,7 +188,7 @@ These array query algorithms have significant practical applications. For instan
 
 <p><strong>Fenwick Tree (Binary Indexed Tree)</strong></p>
 <ul>
-    <li><strong>Principle:</ li>Utilizes a clever bitwise approach to efficiently handle prefix sum queries and point updates in O(log n) time.</li>
+    <li><strong>Principle:</strong></ li>Utilizes a clever bitwise approach to efficiently handle prefix sum queries and point updates in O(log n) time.</li>
     <li><strong>Application:</strong> Commonly used in problems involving cumulative sums or frequency counts, such as calculating the sum of elements in a range.</li>
     <li><strong>Implication:</strong> Provides efficient updates and queries, but requires additional space for storage, which can be a consideration in memory-constrained environments.</li>
 </ul>
